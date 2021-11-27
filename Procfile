@@ -1,0 +1,1 @@
+worker: node music_rus.py
