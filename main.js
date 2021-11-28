@@ -77,7 +77,7 @@ client.on('guildMemberRemove', member => { // ивент, когда польз�
     client.channels.cache.get('712604761232375859').send(embed) // айди вашего канала с логами
   })
 
-  client.once('reconnecting', () => {
+client.once('reconnecting', () => {
     console.log('Reconnecting!');
     });
     
@@ -87,17 +87,17 @@ client.on('guildMemberRemove', member => { // ивент, когда польз�
     
     client.on('message', async message => {
     if (message.author.bot) return;
-    if (!message.content.startsWith(prefix)) return;
+    if (!message.content.startsWith(d.)) return;
     
     const serverQueue = queue.get(message.guild.id);
     
-    if (message.content.startsWith(`${prefix}play`)) {
+    if (message.content.startsWith(`${d.}play`)) {
     execute(message, serverQueue);
     return;
-    } else if (message.content.startsWith(`${prefix}skip`)) {
+    } else if (message.content.startsWith(`${d.}skip`)) {
     skip(message, serverQueue);
     return;
-    } else if (message.content.startsWith(`${prefix}stop`)) {
+    } else if (message.content.startsWith(`${d.}stop`)) {
     stop(message, serverQueue);
     return;
     } else {
